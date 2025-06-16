@@ -1,1 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stake Mines 回測模擬器</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Stake Mines 回測模擬器</h1>
 
+  <div class="card">
+    <label>本金（USD）<input id="balance" type="number" value="10000"></label>
+    <label>起始下注（USD）<input id="basebet" type="number" value="0.0058" step="0.0001"></label>
+    <label>每次輸加碼（%）<input id="increase" type="number" value="10"></label>
+    <label>地雷數（1–24）<input id="bombs" type="number" value="3"></label>
+    <label>剩下格子數（1–25）<input id="tiles" type="number" value="9"></label>
+    <label>模擬局數<select id="rounds">
+      <option value="1000">1,000</option>
+      <option value="10000" selected>10,000</option>
+      <option value="100000">100,000</option>
+    </select></label>
+    <button onclick="simulate()">開始模擬</button>
+  </div>
+
+  <div class="card">
+    <h2>模擬結果</h2>
+    <pre id="result">尚未開始</pre>
+  </div>
+
+  <script src="mines.js"></script>
+</body>
+</html>
